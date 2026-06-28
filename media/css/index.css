@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1e1e1e;
+  color: white;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px;
+}
+
+header {
+  margin-bottom: 24px;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #999;
+}
+
+.channel-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.channel {
+  background: #2d2d30;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.channel:hover {
+  background: #3a3a3d;
+}
+
+.channel-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.channel-users {
+  margin-top: 8px;
+  color: #999;
+  font-size: 14px;
+}

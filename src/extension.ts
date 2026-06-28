@@ -1,5 +1,4 @@
 import * as vscode from "vscode";
-import * as fs from "fs";
 import { getWebviewContent } from "./webview";
 
 export function activate(context: vscode.ExtensionContext) {
@@ -25,10 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
         },
       );
 
-      panel.webview.html = fs.readFileSync(
-        vscode.Uri.joinPath(context.extensionUri, "media", getWebviewContent(0)).fsPath,
-        "utf8",
-      );
+      panel.webview.html = getWebviewContent(context, panel.webview, 0);
     },
   );
   context.subscriptions.push(openWebviewCommand);
